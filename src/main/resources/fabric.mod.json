@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "id": "liquidglass",
+  "version": "1.0.0",
+  "name": "Liquid Glass Utils",
+  "description": "A client-side Fabric mod that adds a Liquid Glass–styled dashboard and a collection of lightweight utilities (ping, totem pop, fullbright, motion blur, AppleSkin-like food info, transparent armor, and more).",
+  "authors": ["andrew9perkins-max"],
+  "contact": {
+    "homepage": "https://github.com/andrew9perkins-max/liquidglass-utils"
+  },
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "com.andrew9perkins.liquidglass.core.ModMain"
+    ]
+  },
+  "mixins": [
+    "liquidglass.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.19.5",
+    "fabric": ">=0.141.6+1.21.11"
+  }
+}

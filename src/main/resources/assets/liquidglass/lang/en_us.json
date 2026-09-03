@@ -1,0 +1,8 @@
+{
+  "language": "en_us",
+  "values": {
+    "key.category.liquidglass.category": "Liquid Glass",
+    "key.liquidglass.open_dashboard": "Open Liquid Glass Dashboard",
+    "key.liquidglass.toggle_ping_hud": "Toggle Ping HUD"
+  }
+}
