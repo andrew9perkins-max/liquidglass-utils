@@ -1,18 +1,16 @@
 package com.andrew9perkins.liquidglass.core;
 
 import net.fabricmc.api.ClientModInitializer;
-import net.fabricmc.fabric.api.client.keybinding.v1.KeyBindingHelper;
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
 import net.fabricmc.fabric.api.client.networking.v1.ClientPlayConnectionEvents;
 import net.fabricmc.fabric.api.client.lifecycle.v1.ClientLifecycleEvents;
-import net.minecraft.client.option.KeyBinding;
-import net.minecraft.client.util.InputUtil;
 import com.andrew9perkins.liquidglass.module.ModuleManager;
 import com.andrew9perkins.liquidglass.module.ping.PingModule;
+import com.andrew9perkins.liquidglass.module.weather.WeatherModule;
 import com.andrew9perkins.liquidglass.config.ConfigManager;
 import com.andrew9perkins.liquidglass.keybind.Keybinds;
-import net.minecraft.client.MinecraftClient;
 import com.andrew9perkins.liquidglass.screen.DashboardScreen;
+import net.minecraft.client.MinecraftClient;
 
 public class ModMain implements ClientModInitializer {
 
@@ -31,6 +29,7 @@ public class ModMain implements ClientModInitializer {
         // Register modules
         ModuleManager.init();
         ModuleManager.register(new PingModule());
+        ModuleManager.register(new WeatherModule());
 
         // Register keybinds
         Keybinds.register();
@@ -58,7 +57,7 @@ public class ModMain implements ClientModInitializer {
             } catch (Throwable t) { t.printStackTrace(); }
         });
 
-        System.out.println("[LiquidGlass] Initialized (UI + Ping)");
+        System.out.println("[LiquidGlass] Initialized (UI + Ping + Weather)");
     }
 
     public static ModMain get() { return instance; }
